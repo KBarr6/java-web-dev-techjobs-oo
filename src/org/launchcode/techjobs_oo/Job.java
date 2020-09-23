@@ -37,7 +37,9 @@ public Job(String name, Employer employer, Location location, PositionType posit
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Job job = (Job) o;
         return id == job.id &&
                 name.equals(job.name) &&
@@ -51,7 +53,6 @@ public Job(String name, Employer employer, Location location, PositionType posit
     public int hashCode() {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
     }
-
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
