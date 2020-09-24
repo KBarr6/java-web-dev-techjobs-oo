@@ -101,5 +101,38 @@ public Job(String name, Employer employer, Location location, PositionType posit
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    public String toString() {
+        if (name.equals("")) {
+            name = ("Data not available");
+            //System.out.println(name);
+        }
+        if (employer.getValue().equals("")) {
+            employer.setValue("Data not available");
+            //System.out.println(employer);
+        }
+        if(location.getValue().equals("")) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().equals("")) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().equals("")){
+            coreCompetency.setValue("Data not available");
+        }
+        //if (name.equals("")&& (employer.getValue().equals("")) && location.getValue().equals("") && (positionType.getValue().equals("")) && (coreCompetency.getValue().equals(""))){
+           // return id = (“OOPS! This job does not seem to exist.”);
+        }
+
+        return "\n" +
+                "\n ID: " + id +
+                "\n Name: " + name +
+                "\n Employer: " + employer +
+                "\n Location: " + location +
+                "\n Position Type: " + positionType +
+                "\n Core Competency: " + coreCompetency +
+                "\n";
+    }
+
 }
 
