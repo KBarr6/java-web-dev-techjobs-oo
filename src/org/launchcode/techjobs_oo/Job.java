@@ -122,7 +122,7 @@ public Job(String name, Employer employer, Location location, PositionType posit
         }
         //if (name.equals("")&& (employer.getValue().equals("")) && location.getValue().equals("") && (positionType.getValue().equals("")) && (coreCompetency.getValue().equals(""))){
            // return id = (“OOPS! This job does not seem to exist.”);
-        }
+        //}
 
         return "\n" +
                 "\n ID: " + id +
