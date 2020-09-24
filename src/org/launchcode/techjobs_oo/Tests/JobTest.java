@@ -15,6 +15,7 @@ public class JobTest {
     private Job testerJob2;
     private Job testerJob3;
     private Job testerJob4;
+
     @Before
     public void jobObjects(){
         testJob1 = new Job();
@@ -51,9 +52,9 @@ public class JobTest {
     @Test //returns a blank line before and after the job info
         public void testToString() {
         assertTrue(testerJob.toString().charAt(0) == testerJob.toString().charAt(testerJob.toString().length()-1));
-        assertEquals(testerJob.toString(), "\n\n ID: 3\n Name: Product tester\n Employer: ACME\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
-        assertEquals(testerJob3.toString(), "\n\n ID: 5\n Name: Data not available\n Employer: ACME\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
-        assertEquals(testerJob4.toString(), "\n\n ID: 6\n Name: Data not available\n Employer: Data not available\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
+        assertEquals(testerJob.toString(), "\n\n ID: " + testerJob.getId() + "\n Name: Product tester\n Employer: ACME\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
+        assertEquals(testerJob3.toString(), "\n\n ID: " + testerJob3.getId() + "\n Name: Data not available\n Employer: ACME\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
+        assertEquals(testerJob4.toString(), "\n\n ID: " + testerJob4.getId() + "\n Name: Data not available\n Employer: Data not available\n Location: Desert\n Position Type: Quality control\n Core Competency: Persistence\n");
     }
 
 }
