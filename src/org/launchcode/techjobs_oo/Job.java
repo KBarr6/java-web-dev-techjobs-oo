@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Job {
 
-    private int id;
+  private int id;
     private static int nextId = 1;
 
     private String name;
@@ -18,7 +18,7 @@ public class Job {
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
 public Job(){
-    id = nextId;
+   id = nextId;
     nextId++;
 }
 
@@ -124,8 +124,7 @@ public Job(String name, Employer employer, Location location, PositionType posit
            // return id = (“OOPS! This job does not seem to exist.”);
         //}
 
-        return "\n" +
-                "\n ID: " + id +
+        return  "\n ID: " + id +
                 "\n Name: " + name +
                 "\n Employer: " + employer +
                 "\n Location: " + location +
